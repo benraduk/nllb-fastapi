@@ -1,0 +1,5 @@
+ctranslate2==3.20.0
+transformers==4.34.1
+torch
+fastapi==0.104.1 # should also work with everything already in the environment
+uvicorn==0.23.2
