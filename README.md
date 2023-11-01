@@ -4,7 +4,7 @@ This is a simple implementation of an api server that uses nllb and ctranslate2 
 
 ## Prerequisites
 
-This was written in python-3.10 and might now work with older versions of python.
+This was written in python-3.10 and might not work with older versions of python.
 
 ## Setting up the server
 
