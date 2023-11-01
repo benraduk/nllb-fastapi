@@ -46,7 +46,7 @@ class translator:
 
         return invalid_languages
 
-    def check_langs_not_equel(self, src_lang, tgt_lang):
+    def check_langs_not_equal(self, src_lang, tgt_lang):
         """
         Check if the source and target languages are not the same.
         """
