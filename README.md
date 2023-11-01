@@ -1,4 +1,4 @@
-# Prerequisits
+# prerequisites
 
 This was written in python-3.10 and might now work with older versions of python.
 
