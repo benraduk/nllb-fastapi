@@ -1,4 +1,8 @@
-# prerequisites
+# nllb-fastapi
+
+This is a simple implementation of an api server that uses nllb and ctranslate2 to translate text to different languages
+
+## Prerequisites
 
 This was written in python-3.10 and might now work with older versions of python.
 
