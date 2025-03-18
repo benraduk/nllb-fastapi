@@ -17,7 +17,7 @@ class translator:
         """
 
         tokenizer = transformers.AutoTokenizer.from_pretrained(
-            "./nllb-200-distilled-600M", src_lang=src_lang
+            tokenizer_dir, src_lang=src_lang
         )
 
         input_tokens = tokenizer.convert_ids_to_tokens(tokenizer.encode(input_text))
