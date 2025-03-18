@@ -47,7 +47,7 @@ async def translate(request: Request):
         )
         return JSONResponse(content=jsonable_encoder(error), status_code=400)
 
-    if not translator.check_langs_not_equel(request.src_lang, request.tgt_lang):
+    if not translator.check_langs_not_equal(request.src_lang, request.tgt_lang):
         error = Error("Source and target languages must not be the same")
         return JSONResponse(content=jsonable_encoder(error), status_code=400)
 
