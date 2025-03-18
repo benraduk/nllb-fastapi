@@ -8,7 +8,16 @@ class translator:
         """
         Initialize the translator class with the model and tokenizer directories.
         """
-        self.translator = ctranslate2.Translator(model_dir, device="cuda")
+        try:
+            # Try to initialize with CUDA first
+            self.translator = ctranslate2.Translator(model_dir, device="cuda")
+            print("Using CUDA for translation")
+        except RuntimeError as e:
+            # Fall back to CPU if CUDA is not available
+            print(f"CUDA initialization failed: {str(e)}")
+            print("Falling back to CPU for translation")
+            self.translator = ctranslate2.Translator(model_dir, device="cpu")
+            
         self.lang_list = lang_list
         self.tokenizer_dir = tokenizer_dir
 
