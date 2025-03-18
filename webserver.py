@@ -8,9 +8,14 @@ from pydantic import BaseModel
 import os
 
 # Read environment variables for model and tokenizer directories
-TOKENIZER_DIR = os.getenv("TOKENIZER_DIR", "./nllb-200-1.3B")
-MODEL_DIR = os.getenv("MODEL_DIR", "./nllb-200-1.3B")
-API_KEY = os.getenv("NLLB_API_KEY")
+#TOKENIZER_DIR = os.getenv("TOKENIZER_DIR", "./nllb-200-1.3B")
+#MODEL_DIR = os.getenv("MODEL_DIR", "./nllb-200-1.3B")
+#API_KEY = os.getenv("NLLB_API_KEY")
+
+# Hardcoded Directories
+TOKENIZER_DIR = "/home/ben_braiv_co/nllb-200-1.3B"
+MODEL_DIR = "/home/ben_braiv_co/nllb-ct2-1.3B"
+API_KEY = "sTagAGDSE1ws"
 
 app = FastAPI()
 translator = translator(MODEL_DIR, TOKENIZER_DIR)
