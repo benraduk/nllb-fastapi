@@ -10,6 +10,7 @@ class translator:
         """
         self.translator = ctranslate2.Translator(model_dir, device="cuda")
         self.lang_list = lang_list
+        self.tokenizer_dir = tokenizer_dir
 
     def translate(self, src_lang, tgt_lang, input_text):
         """
@@ -17,7 +18,7 @@ class translator:
         """
 
         tokenizer = transformers.AutoTokenizer.from_pretrained(
-            "./nllb-ct2-1.3B", src_lang=src_lang
+            self.tokenizer_dir, src_lang=src_lang
         )
 
         input_tokens = tokenizer.convert_ids_to_tokens(tokenizer.encode(input_text))
